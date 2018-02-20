@@ -13,6 +13,7 @@ import {AuthService} from './auth/services/auth.service';
 import {UserService} from './services/user.service';
 import {AuthenticatedService} from './auth/services/authenticated.service';
 import {GuardService} from './auth/services/guard.service';
+import { LogoutComponent } from './auth/components/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {GuardService} from './auth/services/guard.service';
     LoginComponent,
     StatusComponent,
     NavbarComponent,
-    TableUsersComponent
+    TableUsersComponent,
+    LogoutComponent
   ],
   imports: [
     routes,

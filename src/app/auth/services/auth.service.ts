@@ -26,5 +26,14 @@ export class AuthService {
     });
     return this.http.get(url, {headers: headers}).toPromise();
   }
+  logout(user: User, token): Promise<any> {
+    const url: string = this.BASE_URL + '/logout';
+    const headers: Headers = new Headers({
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'Authorization': `Bearer ${token}`
+    });
+    return this.http.post(url, user, {headers: headers}).toPromise();
+  }
 
 }
