@@ -10,7 +10,7 @@ const appRoutes: Routes = [
   { path: '', redirectTo: '/users', pathMatch: 'full'},
   { path: 'users', component: TableUsersComponent, canActivate: [AuthenticatedService]},
   { path: 'login', component: LoginComponent, canActivate: [GuardService] },
-  { path: 'status', component: StatusComponent, canActivate: [AuthenticatedService] }
+  { path: 'home', component: StatusComponent, canActivate: [AuthenticatedService] }
 ];
 
 export const routes: ModuleWithProviders = RouterModule.forRoot(appRoutes);

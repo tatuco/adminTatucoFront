@@ -8,7 +8,7 @@ export class GuardService {
   constructor(private auth: AuthService, private router: Router) { }
   canActivate(): boolean {
     if (localStorage.getItem('token')) {
-      this.router.navigateByUrl('/status');
+      this.router.navigateByUrl('/home');
       return false;
     } else {
       return true;

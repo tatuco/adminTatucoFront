@@ -18,7 +18,7 @@ export class LoginComponent {
       .then((user) => {
         localStorage.setItem('token', user.json().token);
         localStorage.setItem('status', user.json().status);
-        this.router.navigateByUrl('/status');
+        this.router.navigateByUrl('/home');
       })
       .catch((err) => {
         console.log(err);

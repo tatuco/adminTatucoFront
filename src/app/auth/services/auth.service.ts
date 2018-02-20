@@ -18,7 +18,7 @@ export class AuthService {
     return this.http.post(url, user,  { headers: this.headers }).toPromise();
   }
   authenticated(token): Promise<any> {
-    const url: string = this.BASE_URL + '/status';
+    const url: string = this.BASE_URL + '/home';
     const headers: Headers = new Headers({
       'Content-Type': 'application/json',
       'Accept': 'application/json',
